@@ -15,7 +15,7 @@ export const main = handler(async (event, context) => {
       ":userId": event.requestContext.identity.cognitoIdentityId,
     },
   };
-
+  console.log(params);
   const result = await dynamoDb.query(params);
 
   // Return the matching list of items in response body
